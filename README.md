@@ -181,6 +181,7 @@ Find out what the mouse is hovering over
 ``` c#
 // send out a ray from the camera to where the mouse pointer is
 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
 RaycastHit hit;
 float distance = 5.0f;
 
