@@ -174,3 +174,29 @@ transform.Translate(Vector3.up * Time.deltaTime, Space.World);
 
 Time.deltaTime is the time between updates (it is not necessarily the same each frame) 
 
+### Rays
+
+Find out what the mouse is hovering over
+
+``` c#
+// send out a ray from the camera to where the mouse pointer is
+Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+RaycastHit hit;
+float distance = 5.0f;
+
+//check if it hits anything
+if (Physics.Raycast(ray, out hit, distance)) //
+{
+    //check tag of collided object
+    if (hit.collider.gameObject.tag == "interactable")
+    {
+
+    }
+
+}
+
+
+
+
+
+
