@@ -197,6 +197,43 @@ if (Physics.Raycast(ray, out hit, distance)) //
 }
 ```
 
+### New Input system
+
+Create a new gameObject and attache a rigidbody and a script to it
+
+``` c#
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerController : MonoBehaviour
+{
+    public InputAction move;
+    public InputAction Activate;
+
+    private void OnEnable()
+    {
+        move.Enable();
+        Activate.Enable();
+    }
+
+    private void OnDisable()
+    {
+        move.Disable();
+        Activate.Disable();
+    }
+
+    private void Update()
+    {
+        Debug.Log(move.ReadValue < Vector2 >());
+        Debug.Log(Activate.ReadValue<float>());
+    }
+}
+```
+
+In the inspector add inputs to the move and activate variables.
+
+![images/inputs.jpg](images/inputs.jpg)
+
 
 
 
