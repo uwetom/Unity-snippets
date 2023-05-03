@@ -232,7 +232,7 @@ public class PlayerController : MonoBehaviour
 
 In the inspector add inputs to the move and activate variables.
 
-![images/inputs.jpg](images/inputs.jpg)
+![Capture.png](Capture.png)
 
 
 
