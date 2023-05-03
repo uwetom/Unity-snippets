@@ -199,7 +199,7 @@ if (Physics.Raycast(ray, out hit, distance)) //
 
 ### New Input system
 
-Create a new gameObject and attache a rigidbody and a script to it
+Add a scrip to a gameOject in your scene
 
 ``` c#
 using UnityEngine;
