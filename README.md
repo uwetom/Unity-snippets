@@ -205,7 +205,10 @@ gameObject.GetComponent<Renderer>().isVisible
 
 ### check if object is to the right of left of center of camera view
 
+Put this script on the camera, target is the object you are checking.
+
 ``` c#
+public Transform target;
 Vector3 heading = target.position - transform.position;
 Vector3 perp = Vector3.Cross(transform.forward, heading);
 float dir = Vector3.Dot(perp, transform.up);
