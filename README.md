@@ -197,6 +197,26 @@ if (Physics.Raycast(ray, out hit, distance)) //
 }
 ```
 
+### check if object is on screen
+
+``` c#
+gameObject.GetComponent<Renderer>().isVisible
+```
+
+### check if object is to the right of left of center of camera view
+
+``` c#
+Vector3 heading = target.position - transform.position;
+Vector3 perp = Vector3.Cross(transform.forward, heading);
+float dir = Vector3.Dot(perp, transform.up);
+  
+if(dir > 0f){
+   //object is left of center
+}else if(dir < 0f){
+   // object is right of center
+}  
+```
+	
 ### New Input system
 
 Add a scrip to a gameOject in your scene
