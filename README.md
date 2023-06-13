@@ -222,6 +222,9 @@ if(dir > 0f){
 	
 ### New Input system
 
+
+Add Input system from package manager
+
 Add a scrip to a gameOject in your scene
 
 ``` c#
