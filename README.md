@@ -219,7 +219,17 @@ if(dir > 0f){
    // object is right of center
 }  
 ```
-	
+
+### Create prefab right in front of the camera
+
+``` c#
+ public GameObject prefab; // add prefab here
+ float distance = 2;
+ Vector3 pos = Camera.main.transform.position + Camera.main.transform.forward * distance;
+
+ Instantiate(prefab, pos, Camera.main.transform.rotation);
+```
+
 ### New Input system
 
 
